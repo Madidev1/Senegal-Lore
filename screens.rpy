@@ -172,6 +172,13 @@ style say_dialogue:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#input
 
+screen show_created_name(prompt):
+    vbox:
+        xpos 900
+        ypos 350
+        text "Ton nom est"
+        text prompt style "created"
+
 screen input(prompt):
     style_prefix "input"
 
@@ -185,6 +192,11 @@ screen input(prompt):
 
             text prompt style "input_prompt"
             input id "input"
+
+style created :
+    size 150
+    color "#eeff00"
+    font "road-rage.ttf"
 
 style input_prompt is default
 
